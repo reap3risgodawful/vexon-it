@@ -37,10 +37,9 @@ particular installation. Representative frames received visual review; a human
 did not watch every frame in real time. A finished export does not establish
 platform acceptance, audience demand, or earnings.
 
-**Potential collaboration.** Technical explainers for IT providers, software
-documentation teams, and educational creators: clarify a specific concept,
-produce appropriate aspect ratios, and deliver editable source with measurable
-export checks. This is a proposed collaboration fit, not an existing engagement.
+**Use within Vexon.** Explain Vexon's own technology work clearly, reuse original
+source for its public educational posts, and retain measurable export checks.
+This is internal promotion and development, not an outsourced content service.
 
 ## Private home operations: reliability, local inference, and recovery
 

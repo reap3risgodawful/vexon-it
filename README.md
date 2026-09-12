@@ -2,13 +2,13 @@
 
 Practical software, reliable local systems, and technical explanations by **RJ Garza Jr** in the Rio Grande Valley, Texas.
 
-[Business website](https://vexonit.com/) · [Partnership inquiries](PARTNERSHIPS.md) · [Project evidence](docs/project-evidence.md)
+[Business portfolio and starter offers](docs/selected-projects.md) · [Business website](https://vexonit.com/) · [Partnership inquiries](PARTNERSHIPS.md) · [Detailed project evidence](docs/project-evidence.md)
 
 ## Watch the work
 
 [![Wi-Fi versus internet — an original animated explainer](examples/wifi-vs-internet/thumbnail.png)](https://github.com/reap3risgodawful/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4)
 
-**[Watch or download the 46-second explainer](https://github.com/reap3risgodawful/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4)** · [Source and reproduction notes](examples/wifi-vs-internet/README.md)
+**[Watch the published Facebook reel](https://www.facebook.com/reel/1467846138733469)** · [Download the 46-second landscape edition](https://github.com/reap3risgodawful/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4) · [Source and reproduction notes](examples/wifi-vs-internet/README.md)
 
 An original, caption-led explanation of why full Wi-Fi bars do not prove internet access. Created in Python with Manim, with separately composed landscape and portrait editions. Both exports passed complete frame decoding: **2,520 frames total**, H.264 video, 30 fps, and silent AAC audio. The diagram is illustrative; this is a sample of technical communication.
 
@@ -28,7 +28,7 @@ Use a fictional helpdesk ticket to compare DNS evidence, choose a scoped fix, an
 
 ## Collaboration
 
-I am interested in scoped technical content pilots, practical product documentation, field-reference tools, and reliability or recovery projects. A useful starting point is one audience, one problem, an agreed deliverable, and clear acceptance criteria.
+Vexon's media and learning examples support its own promotion, research and development. For technology help or a relevant service partnership, start with one problem, an agreed scope and clear acceptance criteria. See the [business portfolio and starter offers](docs/selected-projects.md).
 
 See [partnership options and contact details](PARTNERSHIPS.md).
 
