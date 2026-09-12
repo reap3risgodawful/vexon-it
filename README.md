@@ -12,6 +12,12 @@ Practical software, reliable local systems, and technical explanations by **RJ G
 
 An original, caption-led explanation of why full Wi-Fi bars do not prove internet access. Created in Python with Manim, with separately composed landscape and portrait editions. Both exports passed complete frame decoding: **2,520 frames total**, H.264 video, 30 fps, and silent AAC audio. The diagram is illustrative; this is a sample of technical communication.
 
+## Try a free lesson
+
+**[The domain cannot be found: a 10-minute Active Directory troubleshooting exercise](lessons/ad-domain-discovery/README.md)**
+
+Use a fictional helpdesk ticket to compare DNS evidence, choose a scoped fix, and write a clear validation note. Includes an answer and self-check. No installation, signup, or purchase required; this is a paper exercise, not a recorded Windows lab test.
+
 ## Selected projects
 
 | Project | What I built | Evidence |
