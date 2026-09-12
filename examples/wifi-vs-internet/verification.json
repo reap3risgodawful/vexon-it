@@ -1,0 +1,71 @@
+{
+  "status": "rendered_and_fully_decoded",
+  "variants": {
+    "landscape": {
+      "width": 1920,
+      "height": 1080,
+      "frames_decoded": 1380,
+      "fps": 30.0,
+      "video_seconds": 46.0,
+      "all_video_frames_decoded": true,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "audio_codec": "aac",
+      "audio_sample_rate": 48000,
+      "audio_samples_decoded": 2208768,
+      "audio_max_abs_sample": 0.0,
+      "silent_audio": true,
+      "all_audio_frames_decoded": true,
+      "sha256": "e0635c2b07d58156a3c1fa3b01145f2a442926fde08bec6b5a51035d6bf78142",
+      "bytes": 1748713,
+      "source_sha256": "bb789ccbe1eab50d4b85184e6f9029ec08b53299f708cab7fb07d912911daa68",
+      "mp4_top_level_boxes": [
+        "ftyp",
+        "moov",
+        "free",
+        "mdat"
+      ],
+      "faststart_verified": true
+    },
+    "vertical": {
+      "width": 1080,
+      "height": 1920,
+      "frames_decoded": 1140,
+      "fps": 30.0,
+      "video_seconds": 38.0,
+      "all_video_frames_decoded": true,
+      "video_codec": "h264",
+      "pixel_format": "yuv420p",
+      "audio_codec": "aac",
+      "audio_sample_rate": 48000,
+      "audio_samples_decoded": 1824768,
+      "audio_max_abs_sample": 0.0,
+      "silent_audio": true,
+      "all_audio_frames_decoded": true,
+      "sha256": "41ceb4e23b9bd96ab62011b747288f66b0f39fde5678a669bada21b15d691b78",
+      "bytes": 1494873,
+      "source_sha256": "13f1866b1e0c1f7b9bd535d1e819bcb0561368c69048917d70417b1f83a41db4",
+      "mp4_top_level_boxes": [
+        "ftyp",
+        "moov",
+        "free",
+        "mdat"
+      ],
+      "faststart_verified": true
+    }
+  },
+  "source_sha256": "13f1866b1e0c1f7b9bd535d1e819bcb0561368c69048917d70417b1f83a41db4",
+  "image": "manimcommunity/manim@sha256:05c207afa7e9105557eba5411dc07e8c5dd4ecd0e125d9fe06b7fe4a0feaa201",
+  "network": "none",
+  "cpu_limit": 2,
+  "memory_limit_gib": 2,
+  "new_downloads": false,
+  "external_assets": false,
+  "paid_api_calls": false,
+  "font": "DejaVu Sans installed in pinned image",
+  "hardware_tested": false,
+  "faststart": true,
+  "evidence_date": "2026-09-11",
+  "published_demo": "landscape.mp4",
+  "note": "The export records describe the original local renders. Landscape and vertical source snapshots are included; the portrait export is available on request."
+}

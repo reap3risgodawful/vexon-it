@@ -1,0 +1,130 @@
+{
+  "language": "en-US",
+  "format": "Silent caption-led diagram explainer; no voiceover",
+  "persistent_text": [
+    "HOME TECH / EXPLAINED",
+    "01",
+    "SIMPLIFIED ILLUSTRATION"
+  ],
+  "scenes": [
+    {
+      "scene": "hook",
+      "heading": "Full Wi-Fi bars, but nothing loads?",
+      "diagram_text": [
+        "STRONG SIGNAL",
+        "STILL LOADING"
+      ],
+      "caption": "Signal strength is only part of the story."
+    },
+    {
+      "scene": "two links",
+      "heading": "Two links. Different jobs.",
+      "diagram_text": [
+        "DEVICE",
+        "1 WI-FI",
+        "ROUTER",
+        "2 INTERNET",
+        "INTERNET"
+      ],
+      "caption": "Wi-Fi connects to your router. The router connects onward."
+    },
+    {
+      "scene": "possible interruption",
+      "heading": "Strong Wi-Fi. Internet interrupted.",
+      "caption": "One possible failure: your Wi-Fi signal stays strong."
+    },
+    {
+      "scene": "checks",
+      "heading": "Two quick checks",
+      "card_1": [
+        "Try another site or app",
+        "Only one fails? It may be that service."
+      ],
+      "card_2": [
+        "Try a second device",
+        "Use the same Wi-Fi. Compare what works."
+      ],
+      "caption": "On phones: turn mobile data off for the test, then restore it."
+    },
+    {
+      "scene": "takeaway",
+      "heading": "Still stuck?",
+      "card": [
+        "Check your internet provider for a reported outage.",
+        "Use mobile data, if available."
+      ],
+      "takeaway": "Check which link fails before buying new gear.",
+      "caption": "These checks narrow the cause. They do not prove it."
+    }
+  ],
+  "editions": {
+    "landscape": {
+      "seconds": 46,
+      "scene_timing": [
+        {
+          "scene": "hook",
+          "start_seconds": 0,
+          "end_seconds": 6
+        },
+        {
+          "scene": "two links",
+          "start_seconds": 6,
+          "end_seconds": 16
+        },
+        {
+          "scene": "possible interruption",
+          "start_seconds": 16,
+          "end_seconds": 25
+        },
+        {
+          "scene": "checks",
+          "start_seconds": 25,
+          "end_seconds": 36
+        },
+        {
+          "scene": "takeaway",
+          "start_seconds": 36,
+          "end_seconds": 46
+        }
+      ],
+      "mobile_data_caption_full_opacity_seconds": [
+        30.233333,
+        35.5
+      ]
+    },
+    "vertical": {
+      "seconds": 38,
+      "scene_timing": [
+        {
+          "scene": "hook",
+          "start_seconds": 0,
+          "end_seconds": 5
+        },
+        {
+          "scene": "two links",
+          "start_seconds": 5,
+          "end_seconds": 13
+        },
+        {
+          "scene": "possible interruption",
+          "start_seconds": 13,
+          "end_seconds": 20
+        },
+        {
+          "scene": "checks",
+          "start_seconds": 20,
+          "end_seconds": 29
+        },
+        {
+          "scene": "takeaway",
+          "start_seconds": 29,
+          "end_seconds": 38
+        }
+      ],
+      "mobile_data_caption_full_opacity_seconds": [
+        24.366667,
+        28.5
+      ]
+    }
+  }
+}
