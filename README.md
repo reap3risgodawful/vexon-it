@@ -12,6 +12,12 @@ Practical software, reliable local systems, and technical explanations by **RJ G
 
 An original, caption-led explanation of why full Wi-Fi bars do not prove internet access. Created in Python with Manim, with separately composed landscape and portrait editions. Both exports passed complete frame decoding: **2,520 frames total**, H.264 video, 30 fps, and silent AAC audio. The diagram is illustrative; this is a sample of technical communication.
 
+## Try a few first checks
+
+**[Free Wi-Fi, printer, slow-device and suspicious-link guide](guides/first-checks/README.md)**
+
+Choose what is happening, follow a short path, and know when to hand off the facts. Original guidance with Microsoft, Apple and FTC references. No signup or purchase.
+
 ## Try a free lesson
 
 **[The domain cannot be found: a 10-minute Active Directory troubleshooting exercise](lessons/ad-domain-discovery/README.md)**
