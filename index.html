@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Vexon IT">
-<title>Vexon IT Field App</title>
+<title>Vexon IT Field App · Internal Prototype</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -86,6 +86,17 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+
+  .prototype-notice {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    background: var(--surf);
+    border-bottom: 1px solid var(--border2);
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  .prototype-notice strong { color: var(--gold); }
+  .prototype-notice a { color: var(--blue3); text-decoration: underline; }
 
   /* ── NAV ── */
   .bottom-nav {
@@ -484,11 +495,16 @@
     <div class="logo-mark">VX</div>
     <div>
       <div class="logo-text">VEXON IT</div>
-      <div class="logo-sub">Field Operations</div>
+      <div class="logo-sub">Internal Field Reference</div>
     </div>
   </div>
-  <div class="header-badge">RGV · Active</div>
+  <div class="header-badge">Prototype</div>
 </header>
+
+<aside class="prototype-notice" aria-label="Prototype pricing notice">
+  <strong>Internal planning only.</strong> Rates and templates are examples, not customer quotes.
+  <a id="public-offers-link" href="https://github.com/reap3risgodawful/vexon-it/blob/main/docs/selected-projects.md#start-with-a-small-defined-job">Public starter offers and scope</a>.
+</aside>
 
 <!-- CONTENT AREA -->
 <main class="content">
@@ -496,9 +512,9 @@
   <!-- HOME PAGE -->
   <div class="page active" id="page-home">
     <div class="hero">
-      <div class="hero-label">Good to go</div>
+      <div class="hero-label">Internal demo</div>
       <div class="hero-name">Vexon IT</div>
-      <div class="hero-sub">Your field companion. Scripts, guides, income tracker, and homestead plan — all in one place.</div>
+      <div class="hero-sub">Scripts, guides, a planning tracker, and homestead plan. Use fictional records in this prototype.</div>
       <div class="hero-stats">
         <div class="hstat"><div class="hstat-v" id="client-count">0</div><div class="hstat-l">Clients</div></div>
         <div class="hstat"><div class="hstat-v" id="monthly-total">$0</div><div class="hstat-l">Monthly</div></div>
@@ -552,25 +568,25 @@
   <!-- GUIDES PAGE -->
   <div class="page" id="page-guides">
     <div class="page-title">Job Aids</div>
-    <div class="page-sub">Everything you need on a job. Tap to open full guide. Copy button included.</div>
+    <div class="page-sub">Internal reference drafts. Review rates, terms, and scope before client use. Copied guides include the prototype notice.</div>
 
-    <div class="section-label">Client Scripts</div>
+    <div class="section-label">Internal Script Drafts</div>
     <div class="card" onclick="openDrawer('walkin')" style="--accent: var(--blue);">
       <div class="card-top"><div class="card-icon">🗣️</div><div class="card-title">Walk-In Cold Pitch Script</div><div class="card-arrow" style="color:var(--blue)">→</div></div>
-      <div class="card-desc">Word-for-word script. Opening line, 30-sec pitch, every objection handled, follow-up text.</div>
-      <div class="card-tags"><span class="tag" style="background:#3b82f622;color:var(--blue2)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Memorize this</span></div>
+      <div class="card-desc">Practice pitch and follow-up examples. Review service claims, scope, and rates before use.</div>
+      <div class="card-tags"><span class="tag" style="background:#3b82f622;color:var(--blue2)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
     <div class="card" onclick="openDrawer('upsell')" style="--accent: var(--cyan);">
       <div class="card-top"><div class="card-icon">🔄</div><div class="card-title">Upsell to Retainer Script</div><div class="card-arrow" style="color:var(--cyan)">→</div></div>
-      <div class="card-desc">Say this while packing up after a job. Converts one-time customers to $200+/mo clients.</div>
-      <div class="card-tags"><span class="tag" style="background:#22d3ee22;color:var(--cyan)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">After every job</span></div>
+      <div class="card-desc">Draft conversation about ongoing support. Retainer work needs a separate agreed scope and quote.</div>
+      <div class="card-tags"><span class="tag" style="background:#22d3ee22;color:var(--cyan)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
 
-    <div class="section-label">Templates</div>
+    <div class="section-label">Internal Template Drafts</div>
     <div class="card" onclick="openDrawer('contract')" style="--accent: var(--purple);">
       <div class="card-top"><div class="card-icon">📄</div><div class="card-title">Monthly Retainer Contract</div><div class="card-arrow" style="color:var(--purple)">→</div></div>
-      <div class="card-desc">Simple 1-page service agreement. Print and sign on the spot.</div>
-      <div class="card-tags"><span class="tag" style="background:#8b5cf622;color:var(--purple)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Print ready</span></div>
+      <div class="card-desc">Example agreement for planning. Rates, included work, and terms need review before client use.</div>
+      <div class="card-tags"><span class="tag" style="background:#8b5cf622;color:var(--purple)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
     <div class="card" onclick="openDrawer('invoice')" style="--accent: var(--gold);">
       <div class="card-top"><div class="card-icon">🧾</div><div class="card-title">Invoice + Wave Setup</div><div class="card-arrow" style="color:var(--gold)">→</div></div>
@@ -579,8 +595,8 @@
     </div>
     <div class="card" onclick="openDrawer('flyer')" style="--accent: var(--green);">
       <div class="card-top"><div class="card-icon">📋</div><div class="card-title">Flyer Text for Canva</div><div class="card-arrow" style="color:var(--green)">→</div></div>
-      <div class="card-desc">Exact copy for your Vexon IT flyer. Print 30 copies at Walmart for $6.</div>
-      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Print $6</span></div>
+      <div class="card-desc">Draft flyer with illustrative retainer rates. Adapt it to the agreed offer before publishing.</div>
+      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
 
     <div class="section-label">On-Site Checklists</div>
@@ -617,9 +633,9 @@
       <div class="card-tags"><span class="tag" style="background:#ef444422;color:var(--red)">Walkthrough</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Hardware guide included</span></div>
     </div>
     <div class="card" onclick="openDrawer('pricing')" style="--accent: var(--green);">
-      <div class="card-top"><div class="card-icon">💵</div><div class="card-title">Vexon IT Pricing Card</div><div class="card-arrow" style="color:var(--green)">→</div></div>
-      <div class="card-desc">Flat rate pricing for every service. Show clients on your iPad or print it.</div>
-      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Pricing</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Show clients</span></div>
+      <div class="card-top"><div class="card-icon">💵</div><div class="card-title">Internal Rate Examples</div><div class="card-arrow" style="color:var(--green)">→</div></div>
+      <div class="card-desc">Original project and retainer examples for planning. Public starter offers are linked above; larger work needs a separate quote.</div>
+      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Planning</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
   </div>
 
@@ -816,7 +832,7 @@ MILESTONES:
 // ── GUIDES DATA ──────────────────────────────────────────────────
 const GUIDES = {
   walkin: {
-    tag: "SCRIPT — Memorize This",
+    tag: "INTERNAL DRAFT — Pitch Example",
     title: "Walk-In Cold Pitch Script",
     content: `BEFORE YOU WALK IN
 ─────────────────────────────
@@ -891,7 +907,7 @@ swing by and answer questions?"`,
   },
 
   upsell: {
-    tag: "SCRIPT — After Every Job",
+    tag: "INTERNAL DRAFT — Retainer Conversation",
     title: "Upsell to Monthly Retainer",
     content: `WHEN TO DO THIS
 ─────────────────────────────
@@ -945,7 +961,7 @@ Want me to send a quick breakdown?"`,
   },
 
   contract: {
-    tag: "TEMPLATE — Print & Sign",
+    tag: "INTERNAL DRAFT — Agreement Example",
     title: "Vexon IT Monthly Service Agreement",
     content: `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   VEXON IT SERVICES
@@ -1020,7 +1036,7 @@ Date:      ____________________
   },
 
   invoice: {
-    tag: "TEMPLATE — Monthly Billing",
+    tag: "INTERNAL DRAFT — Billing Example",
     title: "Invoice + Wave Auto-Pay Setup",
     content: `WAVE APP SETUP (free at wave.com)
 ─────────────────────────────
@@ -1076,14 +1092,14 @@ Thanks!"`,
   },
 
   flyer: {
-    tag: "TEMPLATE — Print at Walmart $6",
+    tag: "INTERNAL DRAFT — Flyer Example",
     title: "Vexon IT Flyer for Canva",
     content: `HOW TO MAKE THE FLYER
 ─────────────────────────────
 1. Go to canva.com (free account)
 2. Search "business flyer"
 3. Pick a dark blue/navy template
-4. Replace ALL text with what's below
+4. Adapt the draft below to the agreed offer
 5. Add your phone number and email
 6. Download as PDF (Print quality)
 7. Go to Walmart Photo Center
@@ -1091,7 +1107,7 @@ Thanks!"`,
 9. Total cost: $6–10
 
 
-FLYER TEXT (copy exactly)
+FLYER DRAFT (review rates and scope before use)
 ─────────────────────────────
 
 HEADLINE:
@@ -1478,7 +1494,7 @@ Create team site → Add all employees
 → Everyone sees company files ✓
 
 
-WHAT TO CHARGE
+INTERNAL RATE EXAMPLES — REVIEW BEFORE QUOTING
 ─────────────────────────────
 M365 tenant setup:          $200–300
 + Domain + email setup:     +$150
@@ -1646,7 +1662,7 @@ STEP 6 — Security hardening
   [ ] All passwords documented for client
 
 
-WHAT TO CHARGE
+INTERNAL RATE EXAMPLES — REVIEW BEFORE QUOTING
 ─────────────────────────────
 Basic home router setup:         $100–150
 Full small business (5 devices): $200–350
@@ -1657,48 +1673,40 @@ Full small business (5 devices): $200–350
   },
 
   pricing: {
-    tag: "PRICING CARD — Show Clients",
-    title: "Vexon IT Flat Rate Pricing",
-    content: `┌──────────────────────────────────────┐
-│       VEXON IT SERVICES              │
-│       Flat Rate Pricing              │
-├──────────────────────────────────────┤
-│                                      │
-│  MONTHLY IT RETAINER                 │
-│  Remote + on-site support            │
-│  Starting at $199/month ────────────│
-│                                      │
-│  NETWORK SETUP (up to 5 devices)     │
-│  Router, WiFi, security, docs        │
-│  $250 flat ─────────────────────────│
-│                                      │
-│  WORKGROUP SETUP                     │
-│  File sharing + shared printer       │
-│  $200 flat ─────────────────────────│
-│                                      │
-│  MICROSOFT 365 SETUP                 │
-│  Per user — email + Azure AD join    │
-│  $75/user + $200 base ──────────────│
-│                                      │
-│  BUSINESS EMAIL SETUP                │
-│  Google Workspace or M365            │
-│  $75/user + $150 domain ────────────│
-│                                      │
-│  WIFI & NETWORK JOB                  │
-│  Router setup, troubleshooting       │
-│  Starting at $150 flat ─────────────│
-│                                      │
-│  PC TUNE-UP / VIRUS REMOVAL          │
-│  Remote or on-site                   │
-│  $75–150 flat ──────────────────────│
-│                                      │
-│  All prices are flat rate.           │
-│  No surprise charges. Ever.          │
-│                                      │
-│  📱 Vexon IT: [YOUR PHONE]           │
-│  🌐 vexonit.com                      │
-│  Pharr · Harlingen · Brownsville     │
-└──────────────────────────────────────┘`,
+    tag: "INTERNAL DRAFT — Planning Only",
+    title: "Internal Rate Examples",
+    content: `ORIGINAL PROJECT AND RETAINER EXAMPLES
+These figures describe possible project or retainer scopes,
+not the public time-limited starter sessions.
+Larger projects and ongoing support need a separate agreed quote.
+
+MONTHLY IT RETAINER
+Remote + on-site support
+Starting at $199/month
+
+NETWORK SETUP (up to 5 devices)
+Router, WiFi, security, docs
+$250 flat
+
+WORKGROUP SETUP
+File sharing + shared printer
+$200 flat
+
+MICROSOFT 365 SETUP
+Per user — email + Azure AD join
+$75/user + $200 base
+
+BUSINESS EMAIL SETUP
+Google Workspace or M365
+$75/user + $150 domain
+
+WIFI & NETWORK JOB
+Router setup, troubleshooting
+Starting at $150 flat
+
+PC TUNE-UP / VIRUS REMOVAL
+Remote or on-site
+$75–150 flat`,
   },
 };
 
@@ -1715,9 +1723,15 @@ function switchTab(tab) {
 function openDrawer(id) {
   const guide = GUIDES[id];
   if (!guide) return;
+  // Keep the audience and pricing scope attached when Copy All is used.
+  const notice = `INTERNAL REFERENCE PROTOTYPE
+Rates and terms are illustrative planning examples, not a customer quote.
+Public starter offers and scope: ${document.getElementById('public-offers-link').href}
+Projects and ongoing support require separate scope and a quote.
+Review templates before client use.`;
   document.getElementById('drawer-tag').textContent = guide.tag;
   document.getElementById('drawer-title').textContent = guide.title;
-  document.getElementById('drawer-content').textContent = guide.content;
+  document.getElementById('drawer-content').textContent = notice + '\n\n' + guide.content;
   document.getElementById('copy-btn').textContent = '📋 Copy All';
   document.getElementById('copy-btn').classList.remove('copied');
   document.getElementById('drawer-overlay').classList.add('open');

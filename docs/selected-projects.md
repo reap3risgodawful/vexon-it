@@ -46,6 +46,8 @@ These are independent projects. They are not client case studies or claims of ce
 
 ## Start with a small, defined job
 
+These are the **public starter offers** documented in this repository. The [field app](../index.html) is an internal reference prototype: its illustrative project and retainer rates are planning examples, not alternative prices for these time-limited sessions. Larger projects and ongoing support are scoped and quoted separately.
+
 | Offer | Price and scope |
 |---|---|
 | **Remote tech help** | **$25** for up to **20 minutes**, one issue on one device. Examples include Wi-Fi, device or office-printer connection help. |
