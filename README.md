@@ -40,7 +40,11 @@ See [partnership options and contact details](PARTNERSHIPS.md).
 
 ## Working with this repository
 
-The original `index.html` field app is preserved. It is a prototype: use fictional records. Its browser storage and input handling have not been reviewed for real customer data, and it does not process payments or verify income.
+The original `index.html` field app is preserved as an **internal reference prototype**. Its example rates, sales scripts, and contract/flyer templates are planning material that needs review before client use.
+
+**Public pricing:** the [public starter offers and scope](docs/selected-projects.md#start-with-a-small-defined-job) define the customer-facing remote session and on-site visit in this repository. The field app's project and retainer examples are not an alternative public rate sheet or quotes for those sessions. Larger projects and ongoing support are scoped and quoted separately; neither set of figures replaces the other.
+
+Use fictional records in the prototype. Its browser storage and input handling have not been reviewed for real customer data, and it does not process payments or verify income.
 
 The private operations case study shares outcomes and validation methods without publishing deployment configuration or private records. Dated tests describe their tested scope; they are not an uptime guarantee or a claim of customer deployments.
 
