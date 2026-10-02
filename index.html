@@ -635,6 +635,10 @@
     </div>
 
     <div class="section-label">Active Clients</div>
+    <div id="tracker-storage-notice" role="alert" hidden style="font-size:0.62rem;color:var(--gold);line-height:1.6;margin-bottom:10px">
+      <span id="tracker-storage-message"></span>
+      <button class="btn-ghost" id="tracker-clear-storage" onclick="clearUnreadableClients()" hidden>Clear unreadable saved data</button>
+    </div>
     <div id="client-list"></div>
 
     <button class="add-client-btn" onclick="toggleClientForm()">+ Add Client</button>
@@ -643,7 +647,7 @@
         <input class="inp" id="cf-name" placeholder="Business name" />
       </div>
       <div class="form-row">
-        <input class="inp" id="cf-rate" placeholder="Monthly rate ($)" type="number" />
+        <input class="inp" id="cf-rate" placeholder="Monthly rate ($)" type="number" min="0" step="0.01" oninput="this.setCustomValidity('')" />
         <input class="inp" id="cf-city" placeholder="City" />
       </div>
       <div class="form-row">
@@ -1741,7 +1745,54 @@ function copyContent() {
 }
 
 // ── INCOME TRACKER ───────────────────────────────────────────────
-let clients = JSON.parse(localStorage.getItem('vexon_clients') || '[]');
+let clientStorageBlocked = false;
+let clientStorageMessage = '';
+let clients = loadClients();
+
+function loadClients() {
+  try {
+    const saved = localStorage.getItem('vexon_clients');
+    if (saved === null) return [];
+    const parsed = JSON.parse(saved);
+    const validClient = c => c && !Array.isArray(c)
+      && typeof c.name === 'string' && c.name.trim().length > 0
+      && typeof c.rate === 'number' && Number.isFinite(c.rate) && c.rate >= 0
+      && (c.city == null || typeof c.city === 'string');
+    if (!Array.isArray(parsed) || !parsed.every(validClient)) {
+      throw new Error('Invalid saved client records');
+    }
+    return parsed;
+  } catch {
+    clientStorageBlocked = true;
+    clientStorageMessage = 'Saved client data could not be read. It has not been changed. Clear unreadable saved data to start again.';
+    return [];
+  }
+}
+
+function renderStorageNotice() {
+  document.getElementById('tracker-storage-message').textContent = clientStorageMessage;
+  document.getElementById('tracker-storage-notice').hidden = !clientStorageMessage;
+  document.getElementById('tracker-clear-storage').hidden = !clientStorageBlocked;
+}
+
+function clearUnreadableClients() {
+  if (!clientStorageBlocked) return;
+  try {
+    localStorage.removeItem('vexon_clients');
+    clientStorageBlocked = false;
+    clientStorageMessage = '';
+    clients = [];
+  } catch {
+    clientStorageMessage = 'Saved client data could not be cleared. It has not been changed. Check browser storage access and try again.';
+  }
+  renderClients();
+}
+
+function escapeClientText(value) {
+  return value.replace(/[&<>"']/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[character]);
+}
 
 const COLORS = ['#3b82f6','#10b981','#8b5cf6','#f59e0b','#22d3ee','#ef4444','#a78bfa'];
 const MILESTONES = [
@@ -1753,9 +1804,22 @@ const MILESTONES = [
   { amount: 3000, label: '$3,000/mo — Consider going part-time' },
 ];
 
-function saveClients() { localStorage.setItem('vexon_clients', JSON.stringify(clients)); }
+function saveClients(nextClients) {
+  if (clientStorageBlocked) return false;
+  try {
+    localStorage.setItem('vexon_clients', JSON.stringify(nextClients));
+    clients = nextClients;
+    clientStorageMessage = '';
+    return true;
+  } catch {
+    clientStorageMessage = 'Client changes could not be saved. Your existing saved data has not been changed. Check browser storage access and try again.';
+    renderStorageNotice();
+    return false;
+  }
+}
 
 function renderClients() {
+  renderStorageNotice();
   const total = clients.reduce((s, c) => s + c.rate, 0);
   document.getElementById('mrr-display').textContent = '$' + total.toLocaleString();
   document.getElementById('monthly-total').textContent = '$' + total.toLocaleString();
@@ -1769,8 +1833,8 @@ function renderClients() {
     <div class="client-row">
       <div class="cr-dot" style="background:${COLORS[i % COLORS.length]}"></div>
       <div>
-        <div class="cr-name">${c.name}</div>
-        <div style="font-size:0.52rem;color:var(--text2)">${c.city || 'RGV'}</div>
+        <div class="cr-name">${escapeClientText(c.name)}</div>
+        <div style="font-size:0.52rem;color:var(--text2)">${escapeClientText(c.city || 'RGV')}</div>
       </div>
       <div class="cr-rate">$${c.rate}/mo</div>
       <span class="cr-status" style="background:#10b98120;color:var(--green);font-size:0.5rem;padding:2px 8px;border-radius:10px">Active</span>
@@ -1796,11 +1860,19 @@ function toggleClientForm() {
 
 function addClient() {
   const name = document.getElementById('cf-name').value.trim();
-  const rate = parseInt(document.getElementById('cf-rate').value) || 0;
+  const rateInput = document.getElementById('cf-rate');
+  const rateText = rateInput.value.trim();
+  const rate = Number(rateText);
+  const validRate = /^(?:\d+(?:\.\d{1,2})?|\.\d{1,2})$/.test(rateText)
+    && Number.isFinite(rate) && rate >= 0;
+  rateInput.setCustomValidity(validRate ? '' : 'Enter a monthly rate of zero or more, with up to two decimal places.');
+  if (!validRate) {
+    rateInput.reportValidity();
+    return;
+  }
   const city = document.getElementById('cf-city').value.trim();
-  if (!name || !rate) return;
-  clients.push({ name, rate, city });
-  saveClients();
+  if (!name) return;
+  if (!saveClients([...clients, { name, rate, city }])) return;
   renderClients();
   document.getElementById('cf-name').value = '';
   document.getElementById('cf-rate').value = '';
@@ -1809,8 +1881,8 @@ function addClient() {
 }
 
 function removeClient(i) {
-  clients.splice(i, 1);
-  saveClients();
+  if (!Number.isInteger(i) || i < 0 || i >= clients.length) return;
+  if (!saveClients(clients.filter((client, index) => index !== i))) return;
   renderClients();
 }
 
